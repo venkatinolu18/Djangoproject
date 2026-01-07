@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}BMW - Contact{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row"
+                style="text-align: center;height: 97%; background-color: yellowgreen;color: brown;margin: 5px;border-radius: 5px;">
+                <div class="col-sm-12">
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-sm-12">
+                            <h1 class="text-info-emphasis">Contact Us</h1>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-2">
+                            <span style="color:orangered;font-weight: bold;">Enter Email</span>
+                        </div>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="txtEmail" placeholder="Enter email...!" />
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-2">
+                            <span style="color:orangered;font-weight: bold;">Subject</span>
+                        </div>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="txtSubject"
+                                placeholder="Enter subject...!" />
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-2">
+                            <span style="color:orangered;font-weight: bold;">Message (Body)</span>
+                        </div>
+                        <div class="col-sm-7">
+                            <textarea class="form-control" id="txtMessage"
+                                placeholder="Enter message...!" rows="3"></textarea>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                    <div class="row" style="margin-top: 20px;text-align: center;margin-bottom: 40px;">
+                        <div class="col-sm-12">
+                            <input type="button" class="btn btn-success" value="Send" id="btnSend" />                            
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

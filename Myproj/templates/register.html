@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}BMW - Register{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row"
+                style="height: 97%; background-color: lightcoral;color: whitesmoke;margin: 5px;border-radius: 5px;">
+                <div class="col-sm-12">
+                    <div class="row" style="margin-top: 20px;text-align: center;">
+                        <div class="col-sm-12">
+                            <h1 class="text-info-emphasis">Registration</h1>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-2">
+                            <i class="fa-solid fa-city"></i><span style="color:green;font-weight: bold;">Employee ID</span>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="txtEmpId" placeholder="Enter employee id...!" />
+                        </div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-2">
+                            <span style="color:green;font-weight: bold;">Name</span>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="txtEName" placeholder="Enter name...!" />
+                        </div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-2">
+                            <i class="fa-solid fa-unlock-keyhole"></i><span style="color:green;font-weight: bold;">Password</span>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="password" class="form-control" id="txtPassword"
+                                placeholder="Enter password...!" />
+                        </div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-2">
+                            <span style="color:green;font-weight: bold;">Gender</span>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="radio" id="rbtnMale" name="gender" value="Male" /> <span style="color:rebeccapurple;font-weight: bold;">Male</span>
+                            <input type="radio" id="rbtnFemale" name="gender" value="Female" /> <span style="color:rebeccapurple;font-weight: bold;">Female</span>
+                        </div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-2">
+                            <span style="color:green;font-weight: bold;">Phone</span>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="txtPhone" placeholder="Enter phone...!" />
+                        </div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-2">
+                            <span style="color:green;font-weight: bold;">Email</span>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="txtEmail" placeholder="Enter email...!" />
+                        </div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-2">
+                            <span style="color:green;font-weight: bold;">Salary</span>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="txtSalary" placeholder="Enter salary...!" />
+                        </div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-2">
+                            <span style="color:green;font-weight: bold;">Address</span>
+                        </div>
+                        <div class="col-sm-3">
+                            <textarea class="form-control" id="txtAddress" placeholder="Enter address...!" rows="5" ></textarea>
+                        </div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-2">
+                            <span style="color:green;font-weight: bold;">Department</span>
+                        </div>
+                        <div class="col-sm-3">
+                            <select class="form-control" id="ddlDeptNo">
+                                <option value="0">--Select Department--</option>
+                                <option value="10">Manager</option>
+                                <option value="20">HR</option>
+                                <option value="30">Admin</option>
+                                <option value="40">IT</option>
+                                <option value="50">Sales</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                    <div class="row" style="margin-top: 20px;text-align: center;margin-bottom: 20px;">
+                        <div class="col-sm-12">
+                            <!-- <input type="button" class="btn btn-primary" value="Register" id="btnRegister" />
+                            <input type="button" class="btn btn-danger" value="Cancel" id="btnCancel" /> -->
+                            <button class="btn btn-primary" id="btnRegister">
+                                <img src="{% static 'images/in.png' %}" alt="Register" style="width:20px;height:20px;"/> Register
+                            </button>
+                            <button class="btn btn-danger" id="btnCancel">
+                                <i class="fa-solid fa-xmark"></i>Cancel
+                            </button>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}My Django App{% endblock %}</title>
+        <link rel="icon" href="{% static 'Images/bmwlogo2.png' %}" type="image/x-icon" />
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/mystyles.css' %}" />
+        <script src="{% static 'js/bootstrap.js' %}" type="text/javascript"></script>
+    </head>
+    <body>
+        <!--Header Section Start-->
+        <div>            
+            <div class="row" style="background-color: gray;">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <a href="/home">
+                                <img src="{% static 'images/bmwlogo2.png' %}" alt="BMW Logo" style="width:160px;padding: 10px;"  />
+                            </a>                    
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="row" style="margin-top: 90px;text-align: center;">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-2"><a style="color: white;font-size: 30px;font-weight: bold;text-decoration: none;" href="/home">Home</a></div>
+                                <div class="col-sm-2"><a style="color: white;font-size: 30px;font-weight: bold;text-decoration: none;" href="/login">Login</a></div>
+                                <div class="col-sm-2"><a style="color: white;font-size: 30px;font-weight: bold;text-decoration: none;" href="/register">Registration</a></div>
+                                <div class="col-sm-2"><a style="color: white;font-size: 30px;font-weight: bold;text-decoration: none;" href="/about">AboutUs</a></div>
+                                <div class="col-sm-2"><a style="color: white;font-size: 30px;font-weight: bold;text-decoration: none;" href="/contact">ContactUs</a></div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Header Section End-->
+
+        <!--Content Section Start-->
+        {% block content %}
+        {% endblock %}
+        <!--Content Section End-->
+
+        <!--Footer Section Start-->
+        <div>
+             <div class="row" style="background-color: gray;color: white;text-align: center;padding: 20px;">
+                <div class="col-sm-12">
+                    <p>
+                        &copy; 2026 BMW. All rights reserved.
+                        <a href="https://www.facebook.com/bmw">
+                            <img src="{% static 'images/fb.png' %}" alt="Facebook" style="width:30px;" />
+                        </a> |
+                        <a href="https://www.twitter.com/bmw">
+                            <img src="{% static 'images/tw.png' %}" alt="Twitter" style="width:30px;" />
+                        </a> |
+                        <a href="https://www.instagram.com/bmw">
+                            <img src="{% static 'images/in.png' %}" alt="Instagram" style="width:30px;" />
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--Footer Section End-->
+    </body>
+</html>
